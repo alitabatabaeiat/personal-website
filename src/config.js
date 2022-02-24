@@ -1,5 +1,10 @@
 module.exports = {
-  email: 'a.tabatabaei97@gmail.com',
+  basic: {
+    firstName: 'Seyedali',
+    lastName: 'Tabatabaeialtaha',
+    fullName: 'Seyedali Tabatabaeialtaha',
+    email: 'a.tabatabaei97@gmail.com',
+  },
 
   socialMedia: [
     {
