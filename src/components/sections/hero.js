@@ -65,10 +65,18 @@ const Hero = () => {
     <>
       <p>
         I’m a software developer who love build and develop web applications, work with others, and
-        solve different problems. Currently I'm in Toronto, and enjoying winter.{' '}
+        solve different problems.
+      </p>
+      <p>
+        Born in Tehran, Iran{' '}
         <span role="img" aria-label="snow">
-          ⛄️❄️
+          🇮🇷
         </span>
+        . Living in Toronto, Canada{' '}
+        <span role="img" aria-label="snow">
+          🇨🇦
+        </span>
+        .
       </p>
     </>
   );

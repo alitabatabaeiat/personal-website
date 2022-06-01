@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Icon } from '@components/icons';
 import { socialMedia } from '@config';
+import { basic } from '../config';
 
 const StyledFooter = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -41,7 +42,7 @@ const StyledSocialLinks = styled.div`
 `;
 
 const StyledCredit = styled.div`
-  color: var(--light-slate);
+  color: var(--lightest-slate);
   font-family: var(--font-mono);
   font-size: var(--fz-xxs);
   line-height: 1;
@@ -52,6 +53,8 @@ const StyledCredit = styled.div`
 
   .github-stats {
     margin-top: 10px;
+    color: var(--light-slate);
+    font-size: var(--fz-xxxs);
 
     & > span {
       display: inline-flex;
@@ -69,21 +72,23 @@ const StyledCredit = styled.div`
 
 const Footer = () => {
   const [githubInfo, setGitHubInfo] = useState({
-    stars: null,
-    forks: null,
+    lastUpdateDate: null,
   });
 
   useEffect(() => {
     if (process.env.NODE_ENV !== 'production') {
       return;
     }
-    fetch('https://api.github.com/repos/bchiang7/v4')
+    fetch('https://api.github.com/repos/alitabatabaeiat/personal-website/branches/main')
       .then(response => response.json())
       .then(json => {
-        const { stargazers_count, forks_count } = json;
+        const date = new Date(json.commit.commit.author.date);
         setGitHubInfo({
-          stars: stargazers_count,
-          forks: forks_count,
+          lastUpdateDate: date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          }),
         });
       })
       .catch(e => console.error(e));
@@ -107,20 +112,16 @@ const Footer = () => {
       <StyledCredit tabindex="-1">
         <a href="https://github.com/bchiang7/v4">
           <div>Designed &amp; Built by Brittany Chiang</div>
-
-          {githubInfo.stars && githubInfo.forks && (
-            <div className="github-stats">
-              <span>
-                <Icon name="Star" />
-                <span>{githubInfo.stars.toLocaleString()}</span>
-              </span>
-              <span>
-                <Icon name="Fork" />
-                <span>{githubInfo.forks.toLocaleString()}</span>
-              </span>
-            </div>
-          )}
         </a>
+        {'|'}
+        <a href="https://github.com/alitabatabaeiat/personal-website">
+          <div>Customized By {basic.fullName}</div>
+        </a>
+        {githubInfo.lastUpdateDate && (
+          <div className="github-stats">
+            <span>Last Updated On: {githubInfo.lastUpdateDate}</span>
+          </div>
+        )}
       </StyledCredit>
     </StyledFooter>
   );
