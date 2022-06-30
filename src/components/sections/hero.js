@@ -64,8 +64,8 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m a software developer who love build and develop web applications, work with others, and
-        solve different problems.
+        I’m a software developer who loves building and develop web applications, work with others,
+        and solve different problems.
       </p>
       <p>
         Born in Tehran, Iran{' '}
