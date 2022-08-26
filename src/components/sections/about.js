@@ -140,8 +140,8 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Seyedali, you can call me <span className="nickname">Ali</span>,
-              though. You'll here more about me in coming weeks!
+              Hello! My name is Seyedali <span className="nickname">{'"Ali"'}</span>. You'll here
+              more about me in coming weeks!
             </p>
           </div>
         </StyledText>

@@ -60,8 +60,10 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">{basic.fullName}</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
-  const four = (
+
+  const three = <h2 className="big-heading">({basic.nickname})</h2>;
+  const four = <h3 className="big-heading">I build things for the web.</h3>;
+  const five = (
     <>
       <p>
         I’m a software developer who loves building and develop web applications, work with others,
@@ -80,7 +82,7 @@ const Hero = () => {
       </p>
     </>
   );
-  const five = (
+  const six = (
     <a className="email-link" href={`mailto:${basic.email}`}>
       Get In Touch{' '}
       <span role="img" aria-label="mail">
@@ -89,7 +91,7 @@ const Hero = () => {
     </a>
   );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, four, five, six];
 
   return (
     <StyledHeroSection>
