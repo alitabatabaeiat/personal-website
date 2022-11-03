@@ -5,6 +5,7 @@ module.exports = {
     fullName: 'Seyedali Tabatabaeialtaha',
     nickname: 'Ali Tabatabaei',
     email: 'a.tabatabaei97@gmail.com',
+    resume: 'Ali-Tabatabaei-Resume.pdf',
   },
 
   socialMedia: [

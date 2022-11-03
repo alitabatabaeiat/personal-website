@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { navLinks } from '@config';
+import { basic, navLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
 
@@ -74,7 +74,7 @@ const StyledHamburgerButton = styled.button`
       top: ${props => (props.menuOpen ? `0` : `-10px`)};
       opacity: ${props => (props.menuOpen ? 0 : 1)};
       transition: ${({ menuOpen }) =>
-    menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
+        menuOpen ? 'var(--ham-before-active)' : 'var(--ham-before)'};
     }
     &:after {
       width: ${props => (props.menuOpen ? `100%` : `80%`)};
@@ -266,7 +266,7 @@ const Menu = () => {
               </ol>
             )}
 
-            <a href="/resume.pdf" className="resume-link">
+            <a href={`/${basic.resume}`} className="resume-link">
               Resume
             </a>
           </nav>
