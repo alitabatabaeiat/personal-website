@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-import { srConfig } from '@config';
+import { aboutMe, srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
@@ -139,10 +139,7 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>
-              Hello! My name is Seyedali <span className="nickname">{'"Ali"'}</span>. You'll here
-              more about me in coming weeks!
-            </p>
+            <p>{aboutMe}</p>
           </div>
         </StyledText>
 

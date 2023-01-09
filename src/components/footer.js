@@ -115,7 +115,7 @@ const Footer = () => {
         </a>
         {'|'}
         <a href="https://github.com/alitabatabaeiat/personal-website">
-          <div>Customized By {basic.fullName}</div>
+          <div>Customized By {basic.name}</div>
         </a>
         {githubInfo.lastUpdateDate && (
           <div className="github-stats">

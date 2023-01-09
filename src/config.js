@@ -1,12 +1,15 @@
 module.exports = {
   basic: {
-    firstName: 'Seyedali',
-    lastName: 'Tabatabaeialtaha',
-    fullName: 'Seyedali Tabatabaeialtaha',
-    nickname: 'Ali Tabatabaei',
+    firstName: 'Ali',
+    lastName: 'Tabatabaei',
+    legalName: 'Seyedali Tabatabaeialtaha',
+    name: 'Ali Tabatabaei',
     email: 'a.tabatabaei97@gmail.com',
     resume: 'Ali-Tabatabaei-Resume.pdf',
   },
+
+  aboutMe: `I'm a backend developer with 6+ years of experience who loves coding and finding solutions for every problem. I see myself as a fast learner, team player, and organized developer.
+  Although my main focus is backend development with Node JS and Java, since I'm always curious about learning new things I have some valuable experience in other areas like unit/integration testing, DevOps, frontend development, machine learning, and computer network.`,
 
   socialMedia: [
     {

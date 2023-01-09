@@ -58,40 +58,32 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">{basic.fullName}</h2>;
-
-  const three = <h2 className="big-heading">({basic.nickname})</h2>;
-  const four = <h3 className="big-heading">I build things for the web.</h3>;
-  const five = (
+  const items = [];
+  items.push(<h1>Hi, my name is</h1>);
+  items.push(<h2 className="big-heading">{basic.name}</h2>);
+  items.push(<h3 className="big-heading">I build things for the web.</h3>);
+  items.push(
     <>
       <p>
-        I’m a software developer who loves building and develop web applications, work with others,
-        and solve different problems.
-      </p>
-      <p>
-        Born in Tehran, Iran{' '}
-        <span role="img" aria-label="snow">
+        {/* Born in Tehran, Iran <span role="img" aria-label="snow">
           🇮🇷
-        </span>
-        . Living in Toronto, Canada{' '}
-        <span role="img" aria-label="snow">
+        </span>{' '}
+        Living in */}
+        <span role="img" aria-label="flag">
           🇨🇦
-        </span>
-        .
+        </span>{' '}
+        <b>Toronto, Canada</b>
       </p>
-    </>
+    </>,
   );
-  const six = (
+  items.push(
     <a className="email-link" href={`mailto:${basic.email}`}>
       Get In Touch{' '}
       <span role="img" aria-label="mail">
         📫
       </span>
-    </a>
+    </a>,
   );
-
-  const items = [one, two, three, four, five, six];
 
   return (
     <StyledHeroSection>
